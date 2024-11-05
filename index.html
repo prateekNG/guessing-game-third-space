@@ -8,9 +8,14 @@
 </head>
 <body>
   <div class="container" id="intro-screen">
-    <h1>Welcome to the Binary Search Game!</h1>
-    <p>Think of a number between <strong>1</strong> and <strong>1000</strong>. Write it down on paper and press Next.</p>
-    <button id="start-game">Next</button>
+    <h1 class="main-heading">Welcome to the Binary Search Challenge!</h1>
+    <p class="intro-text">
+      <strong>Think of a number between <span class="highlight">1</span> and <span class="highlight">1000</span></strong>, and write it on the piece of paper provided at the stall.
+    </p>
+    <p class="intro-text">
+      This game showcases how algorithms can work like magic. Using a clever technique called <strong>Binary Search</strong>, the computer will guess your number in 10 questions or less. Ready to be amazed?
+    </p>
+    <button id="start-game">Start the Challenge!</button>
   </div>
 
   <div class="container hidden" id="question-screen">
@@ -23,7 +28,7 @@
 
   <div class="container hidden" id="result-screen">
     <h1>Your number is <span id="final-number"></span>!</h1>
-    <button id="play-again">Play Again</button>
+    <button id="play-again">Try Again</button>
   </div>
 
   <script src="script.js"></script>
