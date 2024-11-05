@@ -1,12 +1,14 @@
 let min = 1;
 let max = 1000;
 let guess = Math.floor((min + max) / 2);
+let remainingGuesses = 10; // Initialize remaining guesses
 
 // Elements
 const introScreen = document.getElementById('intro-screen');
 const questionScreen = document.getElementById('question-screen');
 const resultScreen = document.getElementById('result-screen');
 const currentGuessElement = document.getElementById('current-guess');
+const remainingGuessesElement = document.getElementById('remaining-guesses');
 const finalNumberElement = document.getElementById('final-number');
 const startGameButton = document.getElementById('start-game');
 const responseButtons = document.querySelectorAll('.response-button');
@@ -28,7 +30,10 @@ responseButtons.forEach(button => {
     } else {
       max = guess;
     }
-    if (min >= max) {
+
+    remainingGuesses -= 1; // Decrement remaining guesses
+
+    if (min >= max || remainingGuesses <= 0) {
       displayResult();
     } else {
       updateGuess();
@@ -40,6 +45,7 @@ responseButtons.forEach(button => {
 function updateGuess() {
   guess = Math.floor((min + max) / 2);
   currentGuessElement.textContent = guess;
+  remainingGuessesElement.textContent = remainingGuesses; // Update remaining guesses display
 }
 
 // Display the result
@@ -54,6 +60,7 @@ playAgainButton.addEventListener('click', () => {
   min = 1;
   max = 1000;
   guess = Math.floor((min + max) / 2);
+  remainingGuesses = 10; // Reset remaining guesses
   resultScreen.classList.add('hidden');
   introScreen.classList.remove('hidden');
 });

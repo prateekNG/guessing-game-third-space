@@ -99,6 +99,17 @@ button:hover {
   font-weight: bold;
 }
 
+.remaining-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 10px 0;
+}
+
+#remaining-guesses {
+  font-weight: bold;
+  color: #ff4081;
+}
+
 /* Result Page Styling */
 #result-screen h1 {
   font-size: 1.8rem;
