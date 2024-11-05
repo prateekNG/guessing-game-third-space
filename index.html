@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Search Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="intro-screen">
+    <h1>Welcome to the Binary Search Game!</h1>
+    <p>Think of a number between <strong>1</strong> and <strong>1000</strong>. Write it down on paper and press Next.</p>
+    <button id="start-game">Next</button>
+  </div>
+
+  <div class="container hidden" id="question-screen">
+    <h2>Is your number greater than <span id="current-guess">500</span>?</h2>
+    <div class="button-group">
+      <button class="response-button" data-response="yes">Yes</button>
+      <button class="response-button" data-response="no">No</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="result-screen">
+    <h1>Your number is <span id="final-number"></span>!</h1>
+    <button id="play-again">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
